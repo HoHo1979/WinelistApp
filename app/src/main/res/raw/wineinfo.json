@@ -1,0 +1,34 @@
+{
+  "winelists": [
+    {
+      "name": "Chateau Lafite",
+      "vintage": "1999",
+      "score": "95",
+      "price": 10000
+    },
+    {
+      "name": "Chateau Margaux",
+      "vintage": "2005",
+      "score": "99",
+      "price": 25000
+    },
+    {
+      "name": "Chateau Latour",
+      "vintage": "2015",
+      "score": "94",
+      "price": 45000
+    },
+    {
+      "name": "Chateau Mouton",
+      "vintage": "2003",
+      "score": "100",
+      "price": 32000
+    },
+    {
+      "name": "Chateau Haut_Brion",
+      "vintage": "1990",
+      "score": "100",
+      "price": 21000
+    }
+  ]
+}
