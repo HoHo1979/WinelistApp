@@ -53,18 +53,24 @@ public class ReadFromWineJsonFile {
 
             JSONObject winejsonObject=wines.getJSONObject(i);
             ContentValues values = new ContentValues();
-            values.put(WineContract.NAME,winejsonObject.getString(WineContract.NAME));
-            values.put(WineContract.VINTAGE,winejsonObject.getString(WineContract.VINTAGE));
-            values.put(WineContract.SCORE,winejsonObject.getInt(WineContract.SCORE));
-            values.put(WineContract.PRICE,winejsonObject.getInt(WineContract.PRICE));
 
-            Log.i(TAG,values.get(WineContract.NAME).toString()+values.getAsInteger(WineContract.SCORE));
+            String name = winejsonObject.getString(WineContract.NAME);
+            int vintage = winejsonObject.getInt(WineContract.VINTAGE);
+            int score=winejsonObject.getInt(WineContract.SCORE);
+            Double price=winejsonObject.getDouble(WineContract.PRICE);
+            values.put(WineContract.NAME,name);
+            values.put(WineContract.VINTAGE,vintage);
+            values.put(WineContract.SCORE,score);
+            values.put(WineContract.PRICE,price);
 
+            Wine wine = new Wine(name,vintage,score,price,null);
+            wineList.add(wine);
 
         }
 
+    }
 
-
-
+    public List<Wine> getWineList() {
+        return wineList;
     }
 }
