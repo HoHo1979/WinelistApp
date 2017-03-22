@@ -4,31 +4,36 @@
       "name": "Chateau Lafite",
       "vintage": "1999",
       "score": "95",
-      "price": 10000
+      "price": 10000,
+      "imageName":"lafite"
     },
     {
       "name": "Chateau Margaux",
       "vintage": "2005",
       "score": "99",
-      "price": 25000
+      "price": 25000,
+      "imageName":"margaux"
     },
     {
       "name": "Chateau Latour",
       "vintage": "2015",
       "score": "94",
-      "price": 45000
+      "price": 45000,
+      "imageName":"latour"
     },
     {
       "name": "Chateau Mouton",
       "vintage": "2003",
       "score": "100",
-      "price": 32000
+      "price": 32000,
+      "imageName":"mouton"
     },
     {
       "name": "Chateau Haut_Brion",
       "vintage": "1990",
       "score": "100",
-      "price": 21000
+      "price": 21000,
+      "imageName":"hautbrion"
     }
   ]
 }

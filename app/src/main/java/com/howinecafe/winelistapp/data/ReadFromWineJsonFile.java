@@ -58,12 +58,14 @@ public class ReadFromWineJsonFile {
             int vintage = winejsonObject.getInt(WineContract.VINTAGE);
             int score=winejsonObject.getInt(WineContract.SCORE);
             Double price=winejsonObject.getDouble(WineContract.PRICE);
+            String imageName = winejsonObject.getString(WineContract.IMAGENAME);
             values.put(WineContract.NAME,name);
             values.put(WineContract.VINTAGE,vintage);
             values.put(WineContract.SCORE,score);
             values.put(WineContract.PRICE,price);
+            values.put(WineContract.IMAGENAME,imageName);
 
-            Wine wine = new Wine(name,vintage,score,price,null);
+            Wine wine = new Wine(name,vintage,score,price,imageName);
             wineList.add(wine);
 
         }

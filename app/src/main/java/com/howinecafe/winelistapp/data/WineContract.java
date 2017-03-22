@@ -12,5 +12,5 @@ public class WineContract {
     public static final String PRICE="price";
 
 
-
+    public static final String IMAGENAME = "imageName";
 }

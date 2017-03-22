@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.howinecafe.winelistapp.data.Wine;
@@ -22,6 +23,7 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter {
 
     Cursor cursor=null;
     List<Wine> wineList;
+    int image[]={R.drawable.lafite,R.drawable.margaux,R.drawable.latour,R.drawable.mouton,R.drawable.hautbrion};
 
     public WineRecyclerViewAdapter(List<Wine> wineList) {
 
@@ -62,8 +64,8 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter {
         wineViewHolder.name.setText(wine.getName());
         wineViewHolder.vintage.setText(String.valueOf(wine.getVintage()));
         wineViewHolder.score.setText(String.valueOf(wine.getScore()));
-        wineViewHolder.score.setText(String.valueOf(wine.getPrice()));
-
+        wineViewHolder.price.setText(String.valueOf(wine.getPrice()));
+        wineViewHolder.imageName.setImageResource(image[position]);
     }
 
     @Override
@@ -78,6 +80,8 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter {
         private final TextView vintage;
         private final TextView score;
         private final TextView price;
+        private final ImageView imageName;
+
 
         public WineViewHolder(View itemView) {
             super(itemView);
@@ -86,6 +90,8 @@ public class WineRecyclerViewAdapter extends RecyclerView.Adapter {
             vintage = (TextView) itemView.findViewById(R.id.vintage);
             score = (TextView) itemView.findViewById(R.id.score);
             price = (TextView) itemView.findViewById(R.id.price);
+            imageName= (ImageView) itemView.findViewById(R.id.imageView);
+
         }
     }
 
